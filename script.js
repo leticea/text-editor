@@ -18,3 +18,17 @@ let fontList = [
   "Courier New",
   "Cursive"
 ];
+
+const initializer = () => {
+  highlighter(alignButtons, true);
+  highlighter(spacingButtons, true);
+  highlighter(formatButtons, true);
+  highlighter(scriptButtons, true);
+};
+
+fontList.map((value) => {
+  let option = document.createElement("option");
+  option.value = value;
+  option.innerHTML = value;
+  fontName.appendChild(option);
+})
