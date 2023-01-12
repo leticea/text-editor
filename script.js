@@ -52,9 +52,20 @@ optionsButtons.forEach((button) => {
   });
 });
 
-optionsButtons.forEach((button) => {
-  button.addEventListener("click", () => {
+advancedOptionButton.forEach((button) => {
+  button.addEventListener("change", () => {
     modifyText(button.id, false, null)
   });
+});
+
+linkButton.addEventListener("click", () => {
+  let userLink = prompt("Enter a URL?");
+  if (/http/i.test(userLink)) {
+    modifyText(linkButton.id, false, userLink);
+
+  } else {
+    userLink = "http://" + userLink;
+    modifyText(linkButton.id, false, userLink);
+  }
 });
 
