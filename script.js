@@ -16,13 +16,13 @@ let fontList = [
   "Garamond",
   "Georgia",
   "Courier New",
-  "Cursive"
+  "Cursive",
 ];
 
 const initializer = () => {
   highlighter(alignButtons, true);
   highlighter(spacingButtons, true);
-  highlighter(formatButtons, true);
+  highlighter(formatButtons, false);
   highlighter(scriptButtons, true);
 
   fontList.map((value) => {
@@ -96,4 +96,3 @@ const highlighterRemover = (className) => {
 };
 
 window.onload = initializer();
-
